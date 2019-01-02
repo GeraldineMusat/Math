@@ -8,3 +8,10 @@ Un fichier .zip nommé groupe-xxx.zip contenant :
 * Un repertoire R : Statistique et verifications d'hypothèses
 * Un repertoire FIG : Generer les graphiques utilisés dans le rapport 
 * Un repertoire REP : Rapport final en html avec fichiers annexes
+
+## 4 etats choisit : 
+* Montana, 
+* New York, 
+* Kansas, 
+* Floride, 
+* Californie
