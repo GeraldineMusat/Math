@@ -9,7 +9,7 @@ Un fichier .zip nommé groupe-xxx.zip contenant :
 * Un repertoire FIG : Generer les graphiques utilisés dans le rapport 
 * Un repertoire REP : Rapport final en html avec fichiers annexes
 
-## 4 etats choisit : 
+## 5 etats choisit : 
 * Montana, 
 * New York, 
 * Kansas, 
