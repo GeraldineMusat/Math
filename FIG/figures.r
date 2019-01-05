@@ -80,3 +80,34 @@ p <- ggplot(data=newyork_long_temp, aes(x = Long, y = Lat, fill = ..level..)) +
   ylab("Latitude") +
   labs(fill = "Densite")
 # print(p)
+
+
+# MONTANA
+# Ete
+tab <- montana_stat_saison[montana_stat_saison$Saison == "Ete",]
+plot(tab[,"Date"], tab[,"EcType"], type="b") 
+
+
+# Californie
+# Ete
+tab <- californi_stat_saison[californi_stat_saison$Saison == "Ete",]
+plot(tab[,"Date"], tab[,"Moy"], type="b")
+
+
+# Kansas
+# Ete
+tab <- kansas_stat_saison[kansas_stat_saison$Saison == "Ete",]
+plot(tab[,"Date"], tab[,"Moy"], type="b")
+
+
+# New York
+# Ete
+tab <- newyork_stat_saison[newyork_stat_saison$Saison == "Ete",]
+plot(tab[,"Date"], tab[,"Moy"], type="b")
+
+
+# Floride
+# Ete
+tab <- floride_stat_saison[floride_stat_saison$Saison == "Ete",]
+plot(tab[,"Date"], tab[,"Moy"], type="b")
+

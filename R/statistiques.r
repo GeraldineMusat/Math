@@ -187,3 +187,404 @@ print(Moyenne_Temp_annees_Montana)
 
 Moyenne_Long_annees_Montana <- mean(montana[,"Longitude"])
 print(Moyenne_Long_annees_Montana)
+
+
+
+# Saisons
+
+# Floride
+floride_stat_saison <- data.frame(Date=c(), Saison=c(), Min=c(), Max=c(), Moy=c(), EcType=c(), row.names=c())
+montana_stat_saison <- data.frame(Date=c(), Saison=c(), Min=c(), Max=c(), Moy=c(), EcType=c(), row.names=c())
+kansas_stat_saison <- data.frame(Date=c(), Saison=c(), Min=c(), Max=c(), Moy=c(), EcType=c(), row.names=c())
+californi_stat_saison <- data.frame(Date=c(), Saison=c(), Min=c(), Max=c(), Moy=c(), EcType=c(), row.names=c())
+newyork_stat_saison <- data.frame(Date=c(), Saison=c(), Min=c(), Max=c(), Moy=c(), EcType=c(), row.names=c())
+
+annee <- 1980
+s <- c("Printemps", "Ete", "Automne", "Hiver")
+
+for (i in 0:38) {
+  
+  for(k in s){ # Parcourir les 4 saisons
+    
+    if(k == "Printemps"){
+      mois <- 4
+      
+      for (j in 1:3) {
+        date <- paste(annee, "-0", mois, sep = "")
+        
+        tdate <- toupper(floride[,"Date.Local"])
+        tab_date <- floride[which(substr(tdate,1,7)==date),]
+        print(date)
+        
+        temp <- rbind(temp,tab_date[,"Arithmetic.Mean"])
+        
+        mois <- mois + 1
+      }
+      
+      
+    }
+    if(k == "Ete"){
+      mois <- 7
+      
+      for (j in 1:3) {
+        date <- paste(annee, "-0", mois, sep = "")
+        
+        tdate <- toupper(floride[,"Date.Local"])
+        tab_date <- floride[which(substr(tdate,1,7)==date),]
+        print(date)
+        
+        temp <- rbind(temp,tab_date[,"Arithmetic.Mean"])
+        
+        mois <- mois + 1
+      }
+      
+    }
+    if(k == "Automne"){
+      mois <- 10
+      for (j in 1:3) {
+        date <- paste(annee, "-", mois, sep = "")
+        
+        tdate <- toupper(floride[,"Date.Local"])
+        tab_date <- floride[which(substr(tdate,1,7)==date),]
+        print(date)
+        
+        temp <- rbind(temp,tab_date[,"Arithmetic.Mean"])
+        
+        mois <- mois + 1
+      }
+      
+    }
+    if(k == "Hiver"){
+      mois <- 1
+      for (j in 1:3) {
+        date <- paste(annee, "-0", mois, sep = "")
+        
+        tdate <- toupper(floride[,"Date.Local"])
+        tab_date <- floride[which(substr(tdate,1,7)==date),]
+        print(date)
+        
+        temp <- rbind(temp,tab_date[,"Arithmetic.Mean"])
+        
+        mois <- mois + 1
+      }
+    }
+    
+    moy <- mean(temp)
+    min <- min(temp)
+    max <- max(temp)
+    ecarttype <- sqrt(mean(temp^2)-moy^2)
+    saison <- k
+    vect <- data.frame(Date=c(annee), Saison=c(saison), Min=c(min), Max=c(max), Moy=c(moy), EcType=c(ecarttype), row.names=c())
+    floride_stat_saison <- rbind(floride_stat_saison,vect)
+    temp <- c()
+  }
+  
+  # New York 
+  for(k in s){ # Parcourir les 4 saisons
+    
+    if(k == "Printemps"){
+      mois <- 4
+      
+      for (j in 1:3) {
+        date <- paste(annee, "-0", mois, sep = "")
+        
+        tdate <- toupper(newyork[,"Date.Local"])
+        tab_date <- newyork[which(substr(tdate,1,7)==date),]
+        print(date)
+        
+        temp <- rbind(temp,tab_date[,"Arithmetic.Mean"])
+        
+        mois <- mois + 1
+      }
+      
+      
+    }
+    if(k == "Ete"){
+      mois <- 7
+      
+      for (j in 1:3) {
+        date <- paste(annee, "-0", mois, sep = "")
+        
+        tdate <- toupper(newyork[,"Date.Local"])
+        tab_date <- newyork[which(substr(tdate,1,7)==date),]
+        print(date)
+        
+        temp <- rbind(temp,tab_date[,"Arithmetic.Mean"])
+        
+        mois <- mois + 1
+      }
+      
+    }
+    if(k == "Automne"){
+      mois <- 10
+      for (j in 1:3) {
+        date <- paste(annee, "-", mois, sep = "")
+        
+        tdate <- toupper(newyork[,"Date.Local"])
+        tab_date <- newyork[which(substr(tdate,1,7)==date),]
+        print(date)
+        
+        temp <- rbind(temp,tab_date[,"Arithmetic.Mean"])
+        
+        mois <- mois + 1
+      }
+      
+    }
+    if(k == "Hiver"){
+      mois <- 1
+      for (j in 1:3) {
+        date <- paste(annee, "-0", mois, sep = "")
+        
+        tdate <- toupper(newyork[,"Date.Local"])
+        tab_date <- newyork[which(substr(tdate,1,7)==date),]
+        print(date)
+        
+        temp <- rbind(temp,tab_date[,"Arithmetic.Mean"])
+        
+        mois <- mois + 1
+      }
+    }
+    
+    moy <- mean(temp)
+    min <- min(temp)
+    max <- max(temp)
+    ecarttype <- sqrt(mean(temp^2)-moy^2)
+    saison <- k
+    vect <- data.frame(Date=c(annee), Saison=c(saison), Min=c(min), Max=c(max), Moy=c(moy), EcType=c(ecarttype), row.names=c())
+    newyork_stat_saison <- rbind(newyork_stat_saison,vect)
+    temp <- c()
+  }
+  
+  # Californi
+  for(k in s){ # Parcourir les 4 saisons
+    
+    if(k == "Printemps"){
+      mois <- 4
+      
+      for (j in 1:3) {
+        date <- paste(annee, "-0", mois, sep = "")
+        
+        tdate <- toupper(californi[,"Date.Local"])
+        tab_date <- californi[which(substr(tdate,1,7)==date),]
+        print(date)
+        
+        temp <- rbind(temp,tab_date[,"Arithmetic.Mean"])
+        
+        mois <- mois + 1
+      }
+      
+      
+    }
+    if(k == "Ete"){
+      mois <- 7
+      
+      for (j in 1:3) {
+        date <- paste(annee, "-0", mois, sep = "")
+        
+        tdate <- toupper(californi[,"Date.Local"])
+        tab_date <- californi[which(substr(tdate,1,7)==date),]
+        print(date)
+        
+        temp <- rbind(temp,tab_date[,"Arithmetic.Mean"])
+        
+        mois <- mois + 1
+      }
+      
+    }
+    if(k == "Automne"){
+      mois <- 10
+      for (j in 1:3) {
+        date <- paste(annee, "-", mois, sep = "")
+        
+        tdate <- toupper(californi[,"Date.Local"])
+        tab_date <- californi[which(substr(tdate,1,7)==date),]
+        print(date)
+        
+        temp <- rbind(temp,tab_date[,"Arithmetic.Mean"])
+        
+        mois <- mois + 1
+      }
+      
+    }
+    if(k == "Hiver"){
+      mois <- 1
+      for (j in 1:3) {
+        date <- paste(annee, "-0", mois, sep = "")
+        
+        tdate <- toupper(californi[,"Date.Local"])
+        tab_date <- californi[which(substr(tdate,1,7)==date),]
+        print(date)
+        
+        temp <- rbind(temp,tab_date[,"Arithmetic.Mean"])
+        
+        mois <- mois + 1
+      }
+    }
+    
+    moy <- mean(temp)
+    min <- min(temp)
+    max <- max(temp)
+    ecarttype <- sqrt(mean(temp^2)-moy^2)
+    saison <- k
+    vect <- data.frame(Date=c(annee), Saison=c(saison), Min=c(min), Max=c(max), Moy=c(moy), EcType=c(ecarttype), row.names=c())
+    californi_stat_saison <- rbind(californi_stat_saison,vect)
+    temp <- c()
+  }
+  
+  # Montana
+  for(k in s){ # Parcourir les 4 saisons
+    
+    if(k == "Printemps"){
+      mois <- 4
+      
+      for (j in 1:3) {
+        date <- paste(annee, "-0", mois, sep = "")
+        
+        tdate <- toupper(montana[,"Date.Local"])
+        tab_date <- montana[which(substr(tdate,1,7)==date),]
+        print(date)
+        
+        temp <- rbind(temp,tab_date[,"Arithmetic.Mean"])
+        
+        mois <- mois + 1
+      }
+      
+      
+    }
+    if(k == "Ete"){
+      mois <- 7
+      
+      for (j in 1:3) {
+        date <- paste(annee, "-0", mois, sep = "")
+        
+        tdate <- toupper(montana[,"Date.Local"])
+        tab_date <- montana[which(substr(tdate,1,7)==date),]
+        print(date)
+        
+        temp <- rbind(temp,tab_date[,"Arithmetic.Mean"])
+        
+        mois <- mois + 1
+      }
+      
+    }
+    if(k == "Automne"){
+      mois <- 10
+      for (j in 1:3) {
+        date <- paste(annee, "-", mois, sep = "")
+        
+        tdate <- toupper(montana[,"Date.Local"])
+        tab_date <- montana[which(substr(tdate,1,7)==date),]
+        print(date)
+        
+        temp <- rbind(temp,tab_date[,"Arithmetic.Mean"])
+        
+        mois <- mois + 1
+      }
+      
+    }
+    if(k == "Hiver"){
+      mois <- 1
+      for (j in 1:3) {
+        date <- paste(annee, "-0", mois, sep = "")
+        
+        tdate <- toupper(montana[,"Date.Local"])
+        tab_date <- montana[which(substr(tdate,1,7)==date),]
+        print(date)
+        
+        temp <- rbind(temp,tab_date[,"Arithmetic.Mean"])
+        
+        mois <- mois + 1
+      }
+    }
+    
+    moy <- mean(temp)
+    min <- min(temp)
+    max <- max(temp)
+    ecarttype <- sqrt(mean(temp^2)-moy^2)
+    saison <- k
+    vect <- data.frame(Date=c(annee), Saison=c(saison), Min=c(min), Max=c(max), Moy=c(moy), EcType=c(ecarttype), row.names=c())
+    montana_stat_saison <- rbind(montana_stat_saison,vect)
+    temp <- c()
+  }
+  
+  # Kansas
+  for(k in s){ # Parcourir les 4 saisons
+    
+    if(k == "Printemps"){
+      mois <- 4
+      
+      for (j in 1:3) {
+        date <- paste(annee, "-0", mois, sep = "")
+        
+        tdate <- toupper(kansas[,"Date.Local"])
+        tab_date <- kansas[which(substr(tdate,1,7)==date),]
+        print(date)
+        
+        temp <- rbind(temp,tab_date[,"Arithmetic.Mean"])
+        
+        mois <- mois + 1
+      }
+      
+      
+    }
+    if(k == "Ete"){
+      mois <- 7
+      
+      for (j in 1:3) {
+        date <- paste(annee, "-0", mois, sep = "")
+        
+        tdate <- toupper(kansas[,"Date.Local"])
+        tab_date <- kansas[which(substr(tdate,1,7)==date),]
+        print(date)
+        
+        temp <- rbind(temp,tab_date[,"Arithmetic.Mean"])
+        
+        mois <- mois + 1
+      }
+      
+    }
+    if(k == "Automne"){
+      mois <- 10
+      for (j in 1:3) {
+        date <- paste(annee, "-", mois, sep = "")
+        
+        tdate <- toupper(kansas[,"Date.Local"])
+        tab_date <- kansas[which(substr(tdate,1,7)==date),]
+        print(date)
+        
+        temp <- rbind(temp,tab_date[,"Arithmetic.Mean"])
+        
+        mois <- mois + 1
+      }
+      
+    }
+    if(k == "Hiver"){
+      mois <- 1
+      for (j in 1:3) {
+        date <- paste(annee, "-0", mois, sep = "")
+        
+        tdate <- toupper(kansas[,"Date.Local"])
+        tab_date <- kansas[which(substr(tdate,1,7)==date),]
+        print(date)
+        
+        temp <- rbind(temp,tab_date[,"Arithmetic.Mean"])
+        
+        mois <- mois + 1
+      }
+    }
+    
+    moy <- mean(temp)
+    min <- min(temp)
+    max <- max(temp)
+    ecarttype <- sqrt(mean(temp^2)-moy^2)
+    saison <- k
+    vect <- data.frame(Date=c(annee), Saison=c(saison), Min=c(min), Max=c(max), Moy=c(moy), EcType=c(ecarttype), row.names=c())
+    kansas_stat_saison <- rbind(kansas_stat_saison,vect)
+    temp <- c()
+  }
+  
+  annee <- annee + 1
+}
+
+
+
