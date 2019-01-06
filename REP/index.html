@@ -48,16 +48,28 @@
                         <li><a href="pages/des1.html ">Descriptif du sujet</a></li>
                         <li><a href="pages/des2.html ">Descriptif des données</a></li>
                         <li><a href="pages/meth.html ">Méthodologie</a></li>
-                        <li><a id="res" href="pages/res.html">Résultat</a>
-                          <a id="moy" style="visibility:hidden; z-index:100" href="pages/res.html">Moyenne</a>
-                          <a id="max" style="visibility:hidden; z-index:100;" href="pages/res.html">Maximum</a>
-                        </li>
+                        <li class="nav-item dropdown"  >
+                          <a class="nav-link dropdown-toggle" id="as" href="res.html" id="navbar" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Résultat
+                          </a>
+                        <div class="dropdown-menu" id="onpasselacouleur1" aria-labelledby="navbar">
+                          <a class="dropdown-item" href="#">test</a>
+                          <a class="dropdown-item" href="#">test 1</a>
+                          <a class="dropdown-item" href="#">test 2</a>
+						  <a class="dropdown-item" href="#">test</a>
+                          <a class="dropdown-item" href="#">test 1</a>
+                          <a class="dropdown-item" href="#">test 2</a>
+						  <a class="dropdown-item" href="#">test</a>
+                          <a class="dropdown-item" href="#">test 1</a>
+                   
+                        </div>
+                      </li>
                     </ul>
                 </div>
             </div>
         </div>
     </header>
-    <section id="home-slider" style="top: -120px">
+    <section id="home-slider" >
         <div class="container">
             <div class="main-slider">
                 <img src="images/home/slider/slide1/house.png" class="img-responsive slider-house" alt="slider image">
@@ -175,19 +187,21 @@
         </div>
     </footer>
 
-    <script>
-      document.getElementById('res').onmouseover =  function(){document.getElementById('max').style.visibility = 'visible';document.getElementById('moy').style.visibility = 'visible'}
-      document.getElementById('res').onmouseout =  function(){document.getElementById('max').style.visibility = 'hidden';document.getElementById('moy').style.visibility = 'hidden'}
-      document.getElementById('max').onmouseover =  function(){document.getElementById('max').style.visibility = 'visible';document.getElementById('moy').style.visibility = 'visible'}
-      document.getElementById('max').onmouseout =  function(){document.getElementById('max').style.visibility = 'hidden';document.getElementById('moy').style.visibility = 'hidden'}
-      document.getElementById('moy').onmouseover =  function(){document.getElementById('max').style.visibility = 'visible';document.getElementById('moy').style.visibility = 'visible'}
-      document.getElementById('moy').onmouseout =  function(){document.getElementById('max').style.visibility = 'hidden';document.getElementById('moy').style.visibility = 'hidden'}
-    </script>
+
 
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/lightbox.min.js"></script>
     <script type="text/javascript" src="js/wow.min.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
+	    <script>
+	document.getElementById('onpasselacouleur1').onmouseover =  function(){document.getElementById('as').style.background = 'transparent'}
+     /* document.getElementById('res').onmouseover =  function(){document.getElementById('max').style.visibility = 'visible';document.getElementById('moy').style.visibility = 'visible'}
+      document.getElementById('res').onmouseout =  function(){document.getElementById('max').style.visibility = 'hidden';document.getElementById('moy').style.visibility = 'hidden'}
+      document.getElementById('max').onmouseover =  function(){document.getElementById('max').style.visibility = 'visible';document.getElementById('moy').style.visibility = 'visible'}
+      document.getElementById('max').onmouseout =  function(){document.getElementById('max').style.visibility = 'hidden';document.getElementById('moy').style.visibility = 'hidden'}
+      document.getElementById('moy').onmouseover =  function(){document.getElementById('max').style.visibility = 'visible';document.getElementById('moy').style.visibility = 'visible'}
+      document.getElementById('moy').onmouseout =  function(){document.getElementById('max').style.visibility = 'hidden';document.getElementById('moy').style.visibility = 'hidden'}
+   */ </script>
 </body>
 </html>
