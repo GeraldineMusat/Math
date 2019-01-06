@@ -10,7 +10,7 @@
     <link href="css/lightbox.css" rel="stylesheet">
 	  <link href="css/main.css" rel="stylesheet">
 	  <link href="css/responsive.css" rel="stylesheet">
-
+<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.5.0/css/all.css' integrity='sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU' crossorigin='anonymous'>
     <!--[if lt IE 9]>
 	    <script src="js/html5shiv.js"></script>
 	    <script src="js/respond.min.js"></script>
@@ -46,17 +46,22 @@
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-right">
                         <li class="active"><a href="">Home</a></li>
-                        <li><a href="pages/des1.html">Descriptif du sujet</a></li>
-                        <li><a href="pages/des2.html">Descriptif des données</a></li>
-                        <li><a href="pages/meth.html">Méthodologie</a></li>
-                        <li><a href="pages/res.html">Résultat</a></li>
+                        <li><a href="pages/des1.html ">Descriptif du sujet</a></li>
+                        <li><a href="pages/des2.html ">Descriptif des données</a></li>
+                        <li><a href="pages/meth.html ">Méthodologie</a></li>
+                        <li><a  id="gg" href="pages/res.html">Résultat<i class='fas fa-angle-down'></i></a><a id="bbb" style="visibility:hidden" href="pages/res.html">caca</a><a id="aaa" style="visibility:hidden" href="pages/res.html">coco</a></li>
                     </ul>
                 </div>
             </div>
         </div>
     </header>
-
-    <section id="home-slider">
+<script>document.getElementById('gg').onmouseover =  function(){document.getElementById('aaa').style.visibility = 'visible';document.getElementById('bbb').style.visibility = 'visible'}
+document.getElementById('gg').onmouseout =  function(){document.getElementById('aaa').style.visibility = 'hidden';document.getElementById('bbb').style.visibility = 'hidden'}
+document.getElementById('aaa').onmouseover =  function(){document.getElementById('aaa').style.visibility = 'visible';document.getElementById('bbb').style.visibility = 'visible'}
+document.getElementById('aaa').onmouseout =  function(){document.getElementById('aaa').style.visibility = 'hidden';document.getElementById('bbb').style.visibility = 'hidden'}
+document.getElementById('bbb').onmouseover =  function(){document.getElementById('aaa').style.visibility = 'visible';document.getElementById('bbb').style.visibility = 'visible'}
+document.getElementById('bbb').onmouseout =  function(){document.getElementById('aaa').style.visibility = 'hidden';document.getElementById('bbb').style.visibility = 'hidden'}</script>
+    <section id="home-slider" style="top: -120px">
         <div class="container">
             <div class="main-slider">
                 <img src="images/home/slider/slide1/house.png" class="img-responsive slider-house" alt="slider image">
@@ -77,7 +82,7 @@
         <div class="container">
             <div class="row">
                 <h1 class="title text-center wow fadeInDown" data-wow-duration="500ms" data-wow-delay="300ms">Groupe 9</h1>
-                <p class="text-center wow fadeInDown" data-wow-duration="400ms" data-wow-delay="400ms"> Sujet : Évolution température aux États-Unis </p>
+                <p class="text-center wow fadeInDown" data-wow-duration="400ms" data-wow-delay="400ms"> Sujet : Évolution température en France </p>
 
                     <!-- Wrapper for slides -->
                     <div class="carousel-inner">
@@ -91,7 +96,7 @@
                                     </div>
                                     <div class="person-info">
                                         <h2>Adrien ZOCCO</h2>
-                                        <p>Consultant</p>
+                                        <p>CEO &amp; Developer</p>
                                     </div>
                                 </div>
                             </div>
@@ -104,7 +109,7 @@
                                     </div>
                                     <div class="person-info">
                                         <h2>Romain PACE</h2>
-                                        <p>Directeur Général</p>
+                                        <p>CEO &amp; Developer</p>
                                     </div>
                                 </div>
                             </div>
@@ -117,7 +122,7 @@
                                     </div>
                                     <div class="person-info">
                                         <h2>David PIMIENTA</h2>
-                                        <p>Chef de projet</p>
+                                        <p>CEO &amp; Developer</p>
                                     </div>
                                 </div>
                             </div>
@@ -130,7 +135,7 @@
                                     </div>
                                     <div class="person-info">
                                         <h2>Géraldine MUSAT</h2>
-                                        <p>Secrétaire et Analyste, Développeur</p>
+                                        <p>CEO &amp; Developer</p>
                                     </div>
                                 </div>
                             </div>
@@ -158,6 +163,7 @@
                                         <p>
                                             Géraldine MUSAT : Élaboration des fichiers en R
                                         </p>
+
                                     </div>
                                 </div>
                             </div>
