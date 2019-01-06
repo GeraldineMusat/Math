@@ -10,8 +10,8 @@ library(ggplot2)
 # library(ggmap)
 
 # MONTANA
-plot(montana_stat[,"Date"], montana_stat[,"Moy"], type="b") 
-plot(montana_stat[,"Date"], montana_stat[,"Min"], type="b")
+plot(montana_stat[,"Date"], montana_stat[,"Moy"],xlab="Années", ylab="Températures" , main="Évolution de la température minimal au Montana", type="b") 
+plot(montana_stat[,"Date"], montana_stat[,"Min"],xlab="Années", ylab="Températures" , main="Évolution de la température minimal au Montana", type="b")
 plot(montana_stat[,"Date"], montana_stat[,"Max"], type="b")
 plot(montana_stat[,"Date"], montana_stat[,"EcType"], type="b") 
 
