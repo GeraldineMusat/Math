@@ -15,6 +15,7 @@ for(i in 0:38){ # 38 ans
   tab_date <- montana[which(substr(date,1,4)==annee),]
   
   temp <- tab_date[,"Arithmetic.Mean"]
+  temp <- temp[temp <= 117]
   moy <- mean(temp)
   min <- min(temp)
   max <- max(temp)
@@ -28,6 +29,7 @@ for(i in 0:38){ # 38 ans
   tab_date <- californi[which(substr(date,1,4)==annee),]
   
   temp <- tab_date[,"Arithmetic.Mean"]
+  temp <- temp[temp <= 134]
   moy <- mean(temp)
   min <- min(temp)
   max <- max(temp)
@@ -41,6 +43,7 @@ for(i in 0:38){ # 38 ans
   tab_date <- floride[which(substr(date,1,4)==annee),]
   
   temp <- tab_date[,"Arithmetic.Mean"]
+  temp <- temp[temp <= 109]
   moy <- mean(temp)
   min <- min(temp)
   max <- max(temp)
@@ -54,6 +57,7 @@ for(i in 0:38){ # 38 ans
   tab_date <- kansas[which(substr(date,1,4)==annee),]
   
   temp <- tab_date[,"Arithmetic.Mean"]
+  temp <- temp[temp <= 121]
   moy <- mean(temp)
   min <- min(temp)
   max <- max(temp)
@@ -67,6 +71,7 @@ for(i in 0:38){ # 38 ans
   tab_date <- newyork[which(substr(date,1,4)==annee),]
   
   temp <- tab_date[,"Arithmetic.Mean"]
+  temp <- temp[temp <= 109]
   moy <- mean(temp)
   min <- min(temp)
   max <- max(temp)
@@ -218,6 +223,8 @@ for (i in 0:38) {
         
         temp <- rbind(temp,tab_date[,"Arithmetic.Mean"])
         
+        temp <- temp[temp <= 109]
+        
         mois <- mois + 1
       }
       
@@ -234,6 +241,7 @@ for (i in 0:38) {
         print(date)
         
         temp <- rbind(temp,tab_date[,"Arithmetic.Mean"])
+        temp <- temp[temp <= 109]
         
         mois <- mois + 1
       }
@@ -249,6 +257,7 @@ for (i in 0:38) {
         print(date)
         
         temp <- rbind(temp,tab_date[,"Arithmetic.Mean"])
+        temp <- temp[temp <= 109]
         
         mois <- mois + 1
       }
@@ -264,6 +273,7 @@ for (i in 0:38) {
         print(date)
         
         temp <- rbind(temp,tab_date[,"Arithmetic.Mean"])
+        temp <- temp[temp <= 109]
         
         mois <- mois + 1
       }
@@ -293,6 +303,7 @@ for (i in 0:38) {
         print(date)
         
         temp <- rbind(temp,tab_date[,"Arithmetic.Mean"])
+        temp <- temp[temp <= 109]
         
         mois <- mois + 1
       }
@@ -310,6 +321,7 @@ for (i in 0:38) {
         print(date)
         
         temp <- rbind(temp,tab_date[,"Arithmetic.Mean"])
+        temp <- temp[temp <= 109]
         
         mois <- mois + 1
       }
@@ -325,6 +337,7 @@ for (i in 0:38) {
         print(date)
         
         temp <- rbind(temp,tab_date[,"Arithmetic.Mean"])
+        temp <- temp[temp <= 109]
         
         mois <- mois + 1
       }
@@ -340,6 +353,7 @@ for (i in 0:38) {
         print(date)
         
         temp <- rbind(temp,tab_date[,"Arithmetic.Mean"])
+        temp <- temp[temp <= 109]
         
         mois <- mois + 1
       }
@@ -421,6 +435,7 @@ for (i in 0:38) {
       }
     }
     
+    temp <- temp[temp <= 134]
     moy <- mean(temp)
     min <- min(temp)
     max <- max(temp)
@@ -497,6 +512,7 @@ for (i in 0:38) {
       }
     }
     
+    temp <- temp[temp <= 117]
     moy <- mean(temp)
     min <- min(temp)
     max <- max(temp)
@@ -573,6 +589,7 @@ for (i in 0:38) {
       }
     }
     
+    temp <- temp[temp <= 121]
     moy <- mean(temp)
     min <- min(temp)
     max <- max(temp)

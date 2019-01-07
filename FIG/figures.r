@@ -168,3 +168,13 @@ plot(tab[,"Date"], tab[,"Moy"],xlab="Années", ylab="Températures" , main="Evol
 #Printemps
 tab <- floride_stat_saison[floride_stat_saison$Saison == "Printemps",]
 plot(tab[,"Date"], tab[,"Moy"],xlab="Années", ylab="Températures" , main="Evolution de la température en Floride au printemps", type="b")
+
+
+
+
+
+
+plot(californi_stat[,"Date"], californi_stat[,"Moy"], type="b") 
+plot(californi_stat[,"Date"], californi_stat[,"Min"], type="b")
+plot(californi_stat[,"Date"], californi_stat[,"Max"], type="b")
+plot(californi_stat[,"Date"], californi_stat[,"EcType"], type="b")
