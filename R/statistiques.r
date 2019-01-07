@@ -15,7 +15,7 @@ for(i in 0:38){ # 38 ans
   tab_date <- montana[which(substr(date,1,4)==annee),]
   
   temp <- tab_date[,"Arithmetic.Mean"]
-  temp <- temp[temp <= 117]
+  temp <- temp[temp <= 117] # min -70
   moy <- mean(temp)
   min <- min(temp)
   max <- max(temp)
@@ -24,12 +24,12 @@ for(i in 0:38){ # 38 ans
   vect <- data.frame(Date=c(annee), Min=c(min), Max=c(max), Moy=c(moy), EcType=c(ecarttype), row.names=c())
   montana_stat <- rbind(montana_stat,vect)
   
-  # Californi
+  # Californie
   date <- toupper(californi[,"Date.Local"])
   tab_date <- californi[which(substr(date,1,4)==annee),]
   
   temp <- tab_date[,"Arithmetic.Mean"]
-  temp <- temp[temp <= 134]
+  temp <- temp[temp <= 134] #min -45
   moy <- mean(temp)
   min <- min(temp)
   max <- max(temp)
@@ -43,7 +43,7 @@ for(i in 0:38){ # 38 ans
   tab_date <- floride[which(substr(date,1,4)==annee),]
   
   temp <- tab_date[,"Arithmetic.Mean"]
-  temp <- temp[temp <= 109]
+  temp <- temp[temp <= 109] #min -2
   moy <- mean(temp)
   min <- min(temp)
   max <- max(temp)
@@ -57,7 +57,7 @@ for(i in 0:38){ # 38 ans
   tab_date <- kansas[which(substr(date,1,4)==annee),]
   
   temp <- tab_date[,"Arithmetic.Mean"]
-  temp <- temp[temp <= 121]
+  temp <- temp[temp <= 121] #min -40
   moy <- mean(temp)
   min <- min(temp)
   max <- max(temp)
@@ -71,7 +71,7 @@ for(i in 0:38){ # 38 ans
   tab_date <- newyork[which(substr(date,1,4)==annee),]
   
   temp <- tab_date[,"Arithmetic.Mean"]
-  temp <- temp[temp <= 109]
+  temp <- temp[temp <= 109] #min -60
   moy <- mean(temp)
   min <- min(temp)
   max <- max(temp)
