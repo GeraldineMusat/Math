@@ -169,12 +169,14 @@ plot(tab[,"Date"], tab[,"Moy"],xlab="Années", ylab="Températures" , main="Evol
 tab <- floride_stat_saison[floride_stat_saison$Saison == "Printemps",]
 plot(tab[,"Date"], tab[,"Moy"],xlab="Années", ylab="Températures" , main="Evolution de la température en Floride au printemps", type="b")
 
-
-
-
-
-
-plot(californi_stat[,"Date"], californi_stat[,"Moy"], type="b") 
-plot(californi_stat[,"Date"], californi_stat[,"Min"], type="b")
+plot(californi_stat[,"Date"], californi_stat[,"Moy"], type="b")
+plot(californi_stat[,"Date"], californi_stat[,"Max"], type="b")
 plot(californi_stat[,"Date"], californi_stat[,"Max"], type="b")
 plot(californi_stat[,"Date"], californi_stat[,"EcType"], type="b")
+
+plot(californi_stat[,"Date"], californi_stat[,"Max"], xlab="Années", ylab="Températures" , main="Évolution de la température maximum en Californie",type="b") 
+plot(montana_stat[,"Date"], montana_stat[,"Max"], xlab="Années", ylab="Températures" , main="Évolution de la température maximum en Montana",type="b")
+plot(kansas_stat[,"Date"], kansas_stat[,"Max"], xlab="Années", ylab="Températures" , main="Évolution de la température maximum en Kansas",type="b") 
+plot(newyork_stat[,"Date"], newyork_stat[,"Max"], xlab="Années", ylab="Températures" , main="Évolution de la température maximum en New York",type="b") 
+plot(floride_stat[,"Date"], floride_stat[,"Max"], xlab="Années", ylab="Températures" , main="Évolution de la température maximum en Floride",type="b")
+
