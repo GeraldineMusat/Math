@@ -175,8 +175,8 @@ plot(californi_stat[,"Date"], californi_stat[,"Max"], type="b")
 plot(californi_stat[,"Date"], californi_stat[,"EcType"], type="b")
 
 plot(californi_stat[,"Date"], californi_stat[,"Min"], xlab="Années", ylab="Températures" , main="Évolution de la température minimum en Californie",type="b") 
-plot(montana_stat[,"Date"], montana_stat[,"Min"], xlab="Années", ylab="Températures" , main="Évolution de la température minimum en Montana",type="b")
-plot(kansas_stat[,"Date"], kansas_stat[,"Min"], xlab="Années", ylab="Températures" , main="Évolution de la température minimum en Kansas",type="b") 
-plot(newyork_stat[,"Date"], newyork_stat[,"Min"], xlab="Années", ylab="Températures" , main="Évolution de la température minimum en New York",type="b") 
+plot(montana_stat[,"Date"], montana_stat[,"Min"], xlab="Années", ylab="Températures" , main="Évolution de la température minimum au Montana",type="b")
+plot(kansas_stat[,"Date"], kansas_stat[,"Min"], xlab="Années", ylab="Températures" , main="Évolution de la température minimum au Kansas",type="b") 
+plot(newyork_stat[,"Date"], newyork_stat[,"Min"], xlab="Années", ylab="Températures" , main="Évolution de la température minimum à New York",type="b") 
 plot(floride_stat[,"Date"], floride_stat[,"Min"], xlab="Années", ylab="Températures" , main="Évolution de la température minimum en Floride",type="b")
 
