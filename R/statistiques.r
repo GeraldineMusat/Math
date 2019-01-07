@@ -16,6 +16,7 @@ for(i in 0:38){ # 38 ans
   
   temp <- tab_date[,"Arithmetic.Mean"]
   temp <- temp[temp <= 117] # min -70
+  temp <- temp[temp >= -70]
   moy <- mean(temp)
   min <- min(temp)
   max <- max(temp)
@@ -30,6 +31,7 @@ for(i in 0:38){ # 38 ans
   
   temp <- tab_date[,"Arithmetic.Mean"]
   temp <- temp[temp <= 134] #min -45
+  temp <- temp[temp >= -45]
   moy <- mean(temp)
   min <- min(temp)
   max <- max(temp)
@@ -44,6 +46,7 @@ for(i in 0:38){ # 38 ans
   
   temp <- tab_date[,"Arithmetic.Mean"]
   temp <- temp[temp <= 109] #min -2
+  temp <- temp[temp >= -2]
   moy <- mean(temp)
   min <- min(temp)
   max <- max(temp)
@@ -58,6 +61,7 @@ for(i in 0:38){ # 38 ans
   
   temp <- tab_date[,"Arithmetic.Mean"]
   temp <- temp[temp <= 121] #min -40
+  temp <- temp[temp >= -40]
   moy <- mean(temp)
   min <- min(temp)
   max <- max(temp)
@@ -73,6 +77,7 @@ for(i in 0:38){ # 38 ans
     
     temp <- tab_date[,"Arithmetic.Mean"]
     temp <- temp[temp <= 109]
+    temp <- temp[temp >= -60]
     moy <- mean(temp)
     min <- min(temp)
     max <- max(temp)
@@ -282,6 +287,7 @@ for (i in 0:38) {
       }
     }
     
+    temp <- temp[temp >= -2]
     moy <- mean(temp)
     min <- min(temp)
     max <- max(temp)
@@ -361,6 +367,7 @@ for (i in 0:38) {
         mois <- mois + 1
       }
     }
+    temp <- temp[temp >= -60]
     
     moy <- mean(temp)
     min <- min(temp)
@@ -439,6 +446,7 @@ for (i in 0:38) {
     }
     
     temp <- temp[temp <= 134]
+    temp <- temp[temp >= -45]
     moy <- mean(temp)
     min <- min(temp)
     max <- max(temp)
@@ -516,6 +524,7 @@ for (i in 0:38) {
     }
     
     temp <- temp[temp <= 117]
+    temp <- temp[temp >= -70]
     moy <- mean(temp)
     min <- min(temp)
     max <- max(temp)
@@ -592,6 +601,7 @@ for (i in 0:38) {
       }
     }
     
+    temp <- temp[temp >= -40]
     temp <- temp[temp <= 121]
     moy <- mean(temp)
     min <- min(temp)
