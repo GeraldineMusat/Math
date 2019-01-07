@@ -60,12 +60,15 @@
                         <li><a href="des1.html">Descriptif du sujet</a></li>
                         <li class="active"><a href="">Descriptif des données</a></li>
                         <li><a href="meth.html">Méthodologie</a></li>
-                        <li>
-                            <a href="res.html">Résultat</a>
-                            <ul>
-                              <li>test</li>
-                              <li>test 2</li>
-                            </ul>
+                        <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="res.html" id="navbar" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Résultat
+                          </a>
+                          <div class="dropdown-menu" id="onpasselacouleur1" aria-labelledby="navbar">
+                            <a style="padding: 0 20px 0 20px;" class="dropdown-item" href="res.html">Moyenne</a>
+                            <a style="padding: 0 20px 0 20px;" class="dropdown-item" href="max.html">Maximum</a>
+                            <a style="padding: 0 20px 0 20px;" class="dropdown-item" href="min.html">Minimum</a>
+                          </div>
                         </li>
                     </ul>
                 </div>
@@ -133,6 +136,9 @@
         </div>
     </footer>
     <!--/#footer-->
+    <script>
+      document.getElementById('onpasselacouleur1').onmouseover =  function(){document.getElementById('navbar').style.background = 'transparent'}
+    </script>
 
 
     <script type="text/javascript" src="../js/jquery.js"></script>
